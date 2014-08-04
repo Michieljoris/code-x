@@ -2,15 +2,12 @@
 
 var parseNumber = function (s) { return parseInt(s, 10); };
 
-//how to get charcode of letter?
-var abc = 'abcdefghijklmnopqrstuvwxyz';
-function code(c) { return abc.indexOf(c); }
-function steps(c1, c2) { return Math.abs(code(c1) - code(c2)); }
-
 function palindromize(s) {
-    return s.split('').slice(0, s.length/2).reduce(function(p,n,i) {
-        return p + steps(n, s[s.length-i-1]);
-    },0);
+    s = s.split('').map(function(c) { return c.charCodeAt(0);});
+    return s.slice(0, s.length/2)
+        .reduce(function(p,n,i) {
+            return p + Math.abs(n - s[s.length-i-1]);
+        },0);
 }
 
 function processInput() {
@@ -20,15 +17,15 @@ function processInput() {
     console.log(lines.map(palindromize).join('\n'));
 }
 
-var fs = require('fs-extra');
-var input = fs.readFileSync('./love-letter-mystery.txt', { encoding: 'utf8'});
-console.log(input);
-processInput();
+// var fs = require('fs-extra');
+// var input = fs.readFileSync('./love-letter-mystery.txt', { encoding: 'utf8'});
+// console.log(input);
+// processInput();
 
-// var input = "";
-// process.stdin.resume();
-// process.stdin.setEncoding('ascii');
-// process.stdin.on('data', function (data) {input += data;});
-// process.stdin.on('end', processInput);
+var input = "";
+process.stdin.resume();
+process.stdin.setEncoding('ascii');
+process.stdin.on('data', function (data) {input += data;});
+process.stdin.on('end', processInput);
 
  

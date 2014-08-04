@@ -7,7 +7,7 @@ function processInput() {
     var T = parseNumber(lines[0]);
     lines = lines.slice(1,T+1);
     lines.map(parseNumber).forEach(function(c) {
-       console.log(Math.floor(c/2 * c/2));
+       console.log(Math.floor(c * c / 4));
     });
 } 
 
