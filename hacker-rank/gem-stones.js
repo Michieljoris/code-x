@@ -27,5 +27,3 @@ process.stdin.resume();
 process.stdin.setEncoding('ascii');
 process.stdin.on('data', function (data) {input += data;});
 process.stdin.on('end', processInput);
-
- 
