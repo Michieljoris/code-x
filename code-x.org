@@ -1,4 +1,16 @@
 * good to know
 
 * bugs
+  
+  http://macgyverdev.blogspot.com.au/2014/04/become-better-programmer-with.html
+  http://code.google.com/codejam/contests.html
+  
+  Rosalind also supports every programming language (for much the same reason
+  that Euler does -- you run the code on the provided sample data and give back
+  the result.)
+  https://news.ycombinator.com/item?id=7665690
 
+  https://www.hackerrank.com/categories/algorithms/warmup
+  https://projecteuler.net/
+  https://codility.com/programmers/
+  http://www.codingame.com/cg/
